@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FashionGit</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      const tooltipInstances = tooltips.map(function (el) {
+        return new bootstrap.Tooltip(el);
+      });
+    });
+  </script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <!-- preloader -->
+  <div id="loader"></div>
+
+  <div style="display: none;" id="myDiv" class="animate-bottom">
+    <!-- First Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-first bg-body-white">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="./index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" id="support" href="#" data-bs-toggle="modal"
+                data-bs-target="#supportModal">
+                <i class="fa-solid fa-headset"></i>
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo-container justify-content-center">
+          <a class="navbar-brand" href="./index.html">
+            <img src="images/logo.png" alt="" width="75px" height="70px">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                <i class="fa-solid fa-heart"></i>
+                0
+              </a>
+              <!-- Heart Modal -->
+              <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
+                aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content" style="background-color: var(--primary);">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Like our items and stay updated with our latest products and offers. Subscribe to our
+                        newsletter
+                        now!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-light"
+                        style="background-color: var(--warning);">Subscribe</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link active me-3" id="cartLink">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="./login.html">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                SignIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Support Modal -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" style="background-color: var(--primary);">
+          <div class="modal-header">
+            <h4 class="modal-title" id="supportModalLabel">Contact Support</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>If you need assistance, please contact our support team:</p>
+            <ul>
+              <li>Email: support@fashiongit.com.</li>
+              <li>Phone: 123-456-7890</li>
+            </ul>
+            <p>We are opening everyday at 9 am to 8 pm.</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.7926300677805!2d77.54404977459595!3d10.11605337102793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0769493fed283d%3A0x3e7ea51ae0ad77a2!2sGIT%20Elite%20fashion!5e0!3m2!1sen!2smm!4v1691119628553!5m2!1sen!2smm"
+              width="466" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-white home-cat-nav">
+      <div class="container-fluid pb-2">
+        <!-- Toggler button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <a href="./index.html">
+            <img src="images/logo.png" alt="" width="75px" height="70px" class="d-lg-none">
+          </a>
+        </button>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-lg-none flex-row">
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="./index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#supportModal">
+              <i class="fa-solid fa-headset"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModalDrop">
+              <i class="fa-solid fa-heart"></i>
+              0
+            </a>
+            <!-- Heart Modal -->
+            <div class="modal fade" id="subscribeModalDrop" tabindex="-1" aria-labelledby="subscribeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: var(--primary);">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Like our items and stay updated with our latest products and offers. Subscribe to our newsletter
+                      now!</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light"
+                      style="background-color: var(--warning);">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link active me-3" id="cartLink">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartItemCount">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="./login.html">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-close-white " data-bs-toggle="dropdown" aria-expanded="false">
+                CONTENT
+                <i class="fa-solid fa-bars mx-2"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#v-pills-returns-tab">Returns</a></li>
+                <li><a class="dropdown-item" href="#v-pills-ordering-tab">Ordering</a></li>
+                <li><a class="dropdown-item" href="#v-pills-shipping-tab">Shipping</a></li>
+                <li><a class="dropdown-item" href="#v-pills-international-tab">International</a></li>
+                <li><a class="dropdown-item" href="#v-pills-promo-tab">Promotion</a></li>
+                <li><a class="dropdown-item" href="#v-pills-stockists-tab">Stockists</a></li>
+                <li><a class="dropdown-item" href="#v-pills-contact-tab">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#footer">More</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./kidsWear.html">
+                KIDS' WEARS
+              </a>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./ladiesWear.html">
+                LADIES' WEARS
+              </a>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./madamsWear.html">
+                MADAMS' WEARS
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex me-3" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="search your unique style" aria-label="Search"
+              id="searchInput">
+            <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- image -->
+    <main>
+      <img src="images/help.png" class="img-fluid" alt="">
+    </main>
+
+    <!-- breadcrumb -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <div class="container mt-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">HOME</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Help</li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Dropdown Button for Mobile -->
+        <div class="col-12 d-block d-md-none">
+          <div class="dropdown">
+            <button class="btn btn-close-white dropdown-toggle mb-3" type="button" id="helpMenuDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Help Menu
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="helpMenuDropdown">
+              <li><a class="dropdown-item" href="#accordionReturns">Returns</a></li>
+              <li><a class="dropdown-item" href="#accordionOrdering">Ordering</a></li>
+              <li><a class="dropdown-item" href="#accordionShipping">Shipping</a></li>
+              <li><a class="dropdown-item" href="#accordionInternational">International</a></li>
+              <li><a class="dropdown-item" href="#promoTerms">Promotion</a></li>
+              <li><a class="dropdown-item" href="#stockists">Stockists</a></li>
+              <li><a class="dropdown-item" href="#contactUs">Contact Us</a></li>
+              <li><a class="dropdown-item" href="#footer">More</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- second column for mobile -->
+        <div class="col-12 d-block d-md-none" id="content" style="margin-left: 0px;">
+          <!-- Returns -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Returns</h1>
+          <div class="accordion" id="accordionReturns">
+            <!-- return policy -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseReturnsOne" aria-expanded="true" aria-controls="collapseReturnsOne">
+                  Returns Policy
+                </button>
+              </h2>
+              <div id="collapseReturnsOne" class="accordion-collapse collapse show" data-bs-parent="#accordionReturns">
+                <div class="accordion-body">
+                  <p>Click here to start a Domestic Return or return a gift for store credit:
+                    <strong><a href="#">START A RETURN (U.S.)</a></strong>
+                  </p>
+                  <p>
+                    Click here to start an International Return:
+                    <strong><a href="#">START A RETURN (INTERNATIONAL)</a></strong>
+                  </p>
+                  <p>
+                    Domestic returns must be requested within 30 days of your order date for a refund or store
+                    credit. Once the label has been created you will have 14 days to drop it off at your local
+                    carrier in order to receive a refund. After 14 days, the return label will expire, and you will
+                    need to contact Customer Service for a new return label. This will result in the refund being
+                    issued as store credit towards a future purchase.
+                  </p>
+                  <p>
+                    Domestic returns will be subject to a $6 return shipping fee, which will be deducted from your
+                    refund. If you select store credit, the return shipping fee will be waived.
+                  </p>
+                  <p>
+                    Outbound shipping fees from the original order are not refundable.
+                  </p>
+                  <br>
+                  <p>
+                    <strong>Additional Returns Guidelines</strong>
+                  </p>
+                  <p>
+                    Products must be returned unworn, unwashed, in their original condition and with all tags and
+                    liners attached. Please include the original order packing slip in your return package. Returns
+                    of multiple orders should not be combined and will result in processing delays (additional 8
+                    business days from the first refund issued). If your order was purchased using a gift card, you
+                    will only be refunded directly back to the gift card.
+                  </p>
+                  <p>
+                    We ask that you wear underwear when first trying-on your purchase.
+                  </p>
+                  <p>
+                    We reserve the right to refuse returns that show signs of wear or do not meet the above
+                    criteria.
+                  </p>
+                  <p>
+                    Products marked Final Sale cannot be returned.
+                  </p>
+                  <p>
+                    FashionGit cannot currently create return labels for APO/FPO addresses, as they require customs
+                    information for shipping.
+                  </p>
+                  <p>
+                    International returns are accepted. Return shipping and any reverse duties are the
+                    responsibility of the customer.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- how to request a return -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseReturnsTwo" aria-expanded="false" aria-controls="collapseReturnsTwo">
+                  How To Request A Return
+                </button>
+              </h2>
+              <div id="collapseReturnsTwo" class="accordion-collapse collapse" data-bs-parent="#accordionReturns">
+                <div class="accordion-body">
+                  <p>Domestic Returns:
+                    <br>
+                    <strong>START RETURN (U.S.) </strong> <a href="#">https://returns.fashiongit.com/</a>
+                  </p>
+                  <p>
+                    Follow the steps at the portal to request your return. Please include the original order packing
+                    slip in the return package. Once your return has been created, you will receive a pre-paid
+                    return shipping label via email. Using the provided label, please drop off your package at any
+                    Post Office or USPS location.
+                  </p>
+                  <p>International Returns:
+                    <br>
+                    <strong>START RETURN (International) </strong> <a
+                      href="#">https://web.global-e.com/Returns/portal/fashiongit</a>
+                  </p>
+                  <p><u>Pre-paid Express Returns</u>
+                    <br>
+                    Visit our international returns portal to initiate a return. A pre-paid return shipping label
+                    will
+                    be emailed to you. Please note, the return label expires within 14 days of issue if unused.
+                    Using
+                    the provided label, book a collection or visit your nearest DHL drop off point to send your
+                    items
+                    back to us.
+                    <br>
+                    Pre-paid returns are subject to a return shipping fee which will be deducted from your refund.
+                    Please consult the international shipping & returns table for information about country-specific
+                    returns fees.
+                  </p>
+                  <p><u>Self-postage Returns</u>
+                    <br>
+                    You can send back the returned goods with the shipper of your choice at your expense. Visit our
+                    international returns portal to initiate a return and a returns slip will be emailed to you. We
+                    recommend insuring your package and contacting our Customer Service at help@fashiongit.com with
+                    the
+                    tracking number once shipped.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- refunds -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseReturnsThree" aria-expanded="false" aria-controls="collapseReturnsThree">
+                  Refunds
+                </button>
+              </h2>
+              <div id="collapseReturnsThree" class="accordion-collapse collapse" data-bs-parent="#accordionReturns">
+                <div class="accordion-body">
+                  <p>
+                    Once your return is received and inspected, we will notify you if your return is accepted or
+                    declined. This process can take up to 7 business days from the date your return tracking
+                    information shows delivered.
+                  </p>
+                  <p>
+                    If your return is accepted, your refund will be processed and applied to the original method of
+                    payment.
+                  </p>
+                  <p>
+                    Please note that refunds can take up to 3-5 business days to appear on your bank account due to
+                    varying processing times of financial organizations.
+                  </p>
+                  <p>
+                    Where returns are processed for store credit, a SKIMS gift card will be issued once your return
+                    order is in transit back to us, and sent to the email used to make the original purchase.
+                    Gift returns exchanged for store credit will be issued as a SKIMS gift card to the gift
+                    recipient,
+                    once the return order is in transit back to us.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- shipping fees -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseReturnsFour" aria-expanded="false" aria-controls="collapseReturnsFour">
+                  Shipping Fees
+                </button>
+              </h2>
+              <div id="collapseReturnsFour" class="accordion-collapse collapse" data-bs-parent="#accordionReturns">
+                <div class="accordion-body">
+                  <p>
+                    Outbound shipping fees from the original order are not refundable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ordering -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Ordering</h1>
+          <div class="accordion" id="accordionOrdering">
+            <!-- where to shop -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingOne" aria-expanded="false" aria-controls="collapseOrderingOne">
+                  Where To Shop
+                </button>
+              </h2>
+              <div id="collapseOrderingOne" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    FashionGit is sold exclusively at FashionGit.com, NET-A-PORTER.com, SSENSE.com, OUNASS.com,
+                    through select
+                    Nordstrom locations, Nordstrom.com, through select Saks Fifth Avenue locations,
+                    Saksfifthavenue.com, Selfridges & Co. and Selfridges.com. To see our stockist locations click
+                    here. Be the first to know about new collections, restocks, and more by signing up for emails.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Processing Times -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingTwo" aria-expanded="false" aria-controls="collapseOrderingTwo">
+                  Processing Times
+                </button>
+              </h2>
+              <div id="collapseOrderingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    Orders are processed pending item availability and payment approval. During high volume periods,
+                    product availability may be subject to change while your order is being processed.
+                  </p>
+                  <p>
+                    Most orders placed Monday through Friday will be processed and shipped within 1-2 business days.
+                  </p>
+                  <p>
+                    Orders placed on Friday or over the weekend will start processing on Monday and ship within 1-2
+                    business days.
+                  </p>
+                  <p>
+                    Certain products may have longer processing times. These will be noted on the product and cart
+                    pages.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Pre-orders -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingTwo" aria-expanded="false" aria-controls="collapseOrderingTwo">
+                  Pre-Orders
+                </button>
+              </h2>
+              <div id="collapseOrderingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    Items available for pre-order will be indicated on the product page with the anticipated ship
+                    date. Please note, once your order is placed, the full payment will be captured up front. If you
+                    wish to cancel your order before the ship date, you may do so by contacting Customer Service.
+                  </p>
+                  <p>
+                    If your order contains pre-order items and available items, please note that your order will be
+                    shipped once the pre-order item(s)are received.
+                  </p>
+                  <p>
+                    We are not able to split orders and ship available items first. If you wish to purchase
+                    pre-order items and available items together, we recommend placing a separate orders for each.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- International -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingThree" aria-expanded="false" aria-controls="collapseOrderingThree">
+                  International
+                </button>
+              </h2>
+              <div id="collapseOrderingThree" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    For more information about international shopping, visit <a
+                      href="#v-pills-international-tab">fashiongit.com/international</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Order Tracking -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingFour" aria-expanded="false" aria-controls="collapseOrderingFour">
+                  Order Tracking
+                </button>
+              </h2>
+              <div id="collapseOrderingFour" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    Once your order has been shipped, you will receive an e-mail notification containing the
+                    shipment tracking information.
+                  </p>
+                  <p>
+                    Your order may arrive in several shipments. You will receive a separate e-mail notification for
+                    each shipment.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Taxes -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingFive" aria-expanded="false" aria-controls="collapseOrderingFive">
+                  Taxes
+                </button>
+              </h2>
+              <div id="collapseOrderingFive" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    To the extent that we are required by law to charge and collect taxes on products that we sell,
+                    such taxes are charged based on the tax laws applicable to the location to which the order is
+                    being shipped or delivered. At checkout, all appropriate taxes will be added to the order total.
+                    The tax amount displayed during checkout is an estimate of the tax applicable to your order.
+                    This amount may vary slightly from the actual amount of tax payable in connection with your
+                    order due to different tax rates which apply as a result of the origin and destination of the
+                    item(s) being purchased, as well as other factors.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Payment Options -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingSix" aria-expanded="false" aria-controls="collapseOrderingSix">
+                  Payment Options
+                </button>
+              </h2>
+              <div id="collapseOrderingSix" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    Credit Cards
+                    <br>
+                    We accept Visa, MasterCard, American Express, and Discover cards. Payment is taken once your
+                    order has been shipped. (excluding pre-orders)
+                  </p>
+                  <p>
+                    PayPal
+                    <br>
+                    When selecting this option at checkout, you will be directed to the PayPal site to 'Log In' and
+                    review before clicking 'checkout Now'. Once this transaction is complete, you will then return
+                    to <a href="./index.html">FashionGit.com.</a>
+                  </p>
+                  Afterpay
+                  <br>
+                  Simply shop and proceed to checkout as usual. At checkout, you will choose Afterpay as your
+                  payment method. You will then be directed to the Afterpay website to register and provide payment
+                  details. If you are already an Afterpay user, just log in to your Afterpay account. Then complete
+                  your order.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Updationg Orders -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingSeven" aria-expanded="false" aria-controls="collapseOrderingSeven">
+                  Updationg Orders
+                </button>
+              </h2>
+              <div id="collapseOrderingSeven" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    Orders cannot be changed or updated once they are placed as they immediately start processing.
+                  </p>
+                  <p>
+                    If you'd like to add another item to your order, please place a new order for the item.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Orders Cancellation -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingEight" aria-expanded="false" aria-controls="collapseOrderingEight">
+                  Orders Cancellation
+                </button>
+              </h2>
+              <div id="collapseOrderingEight" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    We are usually unable to change or cancel an order after you've placed it.
+                  </p>
+                  <p>
+                    It is possible that your order may be cancelled during high volume periods due to inventory
+                    selling out. If your order is cancelled, all charges will be automatically refunded. We
+                    recommend trying to place your order again or signing up for our waitlist for the sold out item.
+                  </p>
+                  <p>
+                    To ensure your security, we take additional steps in verifying the details on your order. If you
+                    receive a cancellation notification, please contact Customer Service for more information.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Changing Shipping Address -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrderingNine" aria-expanded="false" aria-controls="collapseOrderingNine">
+                  Changing Shipping Address
+                </button>
+              </h2>
+              <div id="collapseOrderingNine" class="accordion-collapse collapse" data-bs-parent="#accordionOrdering">
+                <div class="accordion-body">
+                  <p>
+                    Shipping addresses cannot be changed. We will only ship to the shipping address entered when the
+                    order was originally placed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Shipping -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Shipping</h1>
+          <div class="accordion" id="accordionShipping">
+            <!-- Ship Methods -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShippingOne" aria-expanded="false" aria-controls="collapseShippingOne">
+                  Ship Methods
+                </button>
+              </h2>
+              <div id="collapseShippingOne" class="accordion-collapse collapse" data-bs-parent="#accordionShipping">
+                <div class="accordion-body">
+                  <p>
+                    We offer free shipping on all orders over $75 in the U.S.
+                  </p>
+                  <p>
+                    We have the following shipping options available in the U.S.
+                  </p>
+                  <p><strong>Economy </strong> - Delivery in 5 to 8 Business Days via UPS or DHL eCommerce
+                    <br>
+                    <strong>Ground </strong> - Delivery in 4 to 6 Business Days via UPS
+                    <br>
+                    <strong>Express </strong> - Order by Noon ET. <strong>Processing begins that same day.
+                    </strong>Delivery in 2 to 3 Business Days via UPS
+                    <br>
+                    <strong>Priority </strong> - Order by Noon ET. <strong>Processing begins that same day.</strong>
+                    Delivery in 1 to 2 Business Days via UPS
+                  </p>
+                  <p>
+                    Please allow up to 1-2 business days for processing before orders ship from our warehouse.
+                  </p>
+                  <p>
+                    If shipping to a P.O. Box or APO/FPO address, you must select Economy. Please note transit times
+                    will vary.
+                  </p>
+                  <p>
+                    Please note we do not ship to freight forwarding address.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 2hrs Local Delivery (LA only) -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShippingTwo" aria-expanded="false" aria-controls="collapseShippingTwo">
+                  2hrs Local Delivery (LA only)
+                </button>
+              </h2>
+              <div id="collapseShippingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionShipping">
+                <div class="accordion-body">
+                  <p>
+                    <strong>Delivery in 2 hours ($10)</strong>
+                  </p>
+                  <p>
+                    We offer local 2-hour delivery for a select region within Los Angeles City.
+                    <br>
+                    Customers in an eligible zip code will be able to ship a subset of our best selling styles to
+                    their home within 2 hours. Delivery is carried out in partnership with Uber and orders must be
+                    placed between 10am – 7pm P.T. Monday-Thursday and 10am – 5pm PT: Friday-Sunday
+                  </p>
+                  <p>
+                    Our delivery region covers zip codes within 10 miles of 90004.
+                  </p>
+                  <p>
+                    Delivery updates will be sent via email or SMS, and you’ll be notified as your driver is
+                    approaching. Please be ready to accept your order in person by showing a valid form of ID and
+                    your order confirmation.
+                    <br>
+                    If you will not be home, please indicate prior to checkout whether you would like the driver to
+                    leave the package in a safe space or return to our warehouse.
+                    For assistance, please contact help@fashiongit.com with the email subject: 2 hour delivery.
+                    Alternatively, you can chat with one of our agents who can assist you.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Shipment Tracking -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShippingThree" aria-expanded="false" aria-controls="collapseShippingThree">
+                  Shipment Tracking
+                </button>
+              </h2>
+              <div id="collapseShippingThree" class="accordion-collapse collapse" data-bs-parent="#accordionShipping">
+                <div class="accordion-body">
+                  <p>
+                    You can track your order with the tracking information provided in your shipment notification
+                    e-mail or by logging in to your account on <a href="./index.html">fashiongit.com</a>
+                  </p>
+                  <p>
+                    If the carrier’s tracking link for your order is not showing activity or movement for more than
+                    5 business days, please contact Customer Service to investigate.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Changing Shipping Address -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShippingFour" aria-expanded="false" aria-controls="collapseShippingFour">
+                  Changing Shipping Address
+                </button>
+              </h2>
+              <div id="collapseShippingFour" class="accordion-collapse collapse" data-bs-parent="#accordionShipping">
+                <div class="accordion-body">
+                  <p>
+                    Shipping addresses cannot be changed. We will only ship to the shipping address entered when the
+                    order was originally placed.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Lost Or Stolen Packages -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShippingFive" aria-expanded="false" aria-controls="collapseShippingFive">
+                  Lost Or Stolen Packages
+                </button>
+              </h2>
+              <div id="collapseShippingFive" class="accordion-collapse collapse" data-bs-parent="#accordionShipping">
+                <div class="accordion-body">
+                  <p>
+                    We know carrier issues and delays can happen. We find that some carriers may scan a package as
+                    <em>“Delivered”</em> when it is still out for delivery and will sometimes physically deliver the
+                    parcel within the next four business days.
+                  </p>
+                  <p>
+                    After <strong>4 business days</strong>, if your order is showing as <em>“Delivered”</em> by the
+                    carrier, and you have still not located your package, and you have checked the area surrounding
+                    your delivery address please contact Customer Service for assistance.
+                  </p>
+                  <p>
+                    Please note, FashionGit is not liable for missing packages marked delivered. If you believe this
+                    was mis-delivered, we recommend filing a claim with the carrier directly. At this time, we're
+                    not currently set up for reshipment orders or exchanges and require that a new order is placed
+                    with the returned funds.
+                  </p>
+                  <p>
+                    If the carrier’s tracking link for your order is not showing activity or movement for more than
+                    5 business days, please contact Customer Service to investigate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- International -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">International</h1>
+          <h5>INTERNATIONAL SHIPPING & RETURNS</h5>
+          <p>
+            International customers can browse and shop our website in their local currency by selecting their
+            country from the dropdown menu in the main navigation. We offer Standard (via RRD) and Express (via DHL)
+            shipping options depending on the destination country. Reference the table below for shipping times and
+            returns fees to your country.
+          </p>
+          <div class="table-container">
+            <table class="table table-bordered my-5 text-center">
+              <thead class="fw-medium">
+                <tr>
+                  <td>COUNTRY</td>
+                  <td>STANDARD TRANSIT TIME</td>
+                  <td>STANDARD SHIPPING FEES</td>
+                  <td>EXPRESS TRANSIT TIME</td>
+                  <td>EXPRESS SHIPPING FEES</td>
+                  <td>DUTY & SALES TAX</td>
+                  <td>PRE-PAID EXPRESS RETURNS FEES</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-medium">AUSTRALIA</td>
+                  <td>12 - 18</td>
+                  <td>€10</td>
+                  <td>4 - 7</td>
+                  <td>€15 or free on orders €85+</td>
+                  <td>Included</td>
+                  <td>€15</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">BELGIUM</td>
+                  <td>12 - 18</td>
+                  <td>$10</td>
+                  <td>6 - 9</td>
+                  <td>$15 or free on orders $125+</td>
+                  <td>Included</td>
+                  <td>$23</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">CANADA</td>
+                  <td>10 - 16</td>
+                  <td>$10</td>
+                  <td>5 - 9</td>
+                  <td>$15 or free on orders CA$115+</td>
+                  <td>Partially Included</td>
+                  <td>$21</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">DENMARK</td>
+                  <td>10 - 16</td>
+                  <td>75Kr</td>
+                  <td>4 - 7</td>
+                  <td>100Kr or free on orders 770Kr+</td>
+                  <td>Included</td>
+                  <td>100Kr</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">GERMANY</td>
+                  <td>10 - 16</td>
+                  <td>€10</td>
+                  <td>5 - 8</td>
+                  <td>€15 or free on orders €85+</td>
+                  <td>Included</td>
+                  <td>€15</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">SWITZERLAND</td>
+                  <td>10 - 18</td>
+                  <td>CH9</td>
+                  <td>4 - 7</td>
+                  <td>CHF14 or free on orders CHF115+ </td>
+                  <td>Included</td>
+                  <td>CHF14</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">UNITED KINGDOM</td>
+                  <td>10 - 16</td>
+                  <td>£10</td>
+                  <td>4 - 7</td>
+                  <td>£15 or free on orders £70+</td>
+                  <td>Included</td>
+                  <td>£15</td>
+                </tr>
+                <tr>
+                  <td class="fw-medium">REST OF WORLD</td>
+                  <td>10 - 18</td>
+                  <td>Fees apply</td>
+                  <td>5 - 10</td>
+                  <td>Fees apply</td>
+                  <td>Not included - payable at checkout</td>
+                  <td>USD$15 (or local currency equivalent)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="accordion" id="accordionInternational">
+            <!-- Duties and Taxes -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseInternationalOne" aria-expanded="false"
+                  aria-controls="collapseInternationalOne">
+                  Duties and Taxes
+                </button>
+              </h2>
+              <div id="collapseInternationalOne" class="accordion-collapse collapse"
+                data-bs-parent="#accordionInternational">
+                <div class="accordion-body">
+                  <p>
+                    For orders going to the United Kingdom, European Union, Mexico, Australia and New Zealand, all
+                    prices shown are inclusive of import duties and taxes.
+                  </p>
+                  <p>
+                    For all other countries, duties & taxes will be automatically calculated and displayed during
+                    checkout. Depending on the country, you will have the option to choose DDP (Delivery Duty Paid)
+                    or DDU (Delivery Duty Unpaid).
+                  </p>
+                  <p>
+                    Please note that if DDU is selected, you will be responsible for paying the required duties &
+                    taxes upon delivery and the shipping carrier may not release the package without payment for
+                    duties & taxes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Returns -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseInternationalTwo" aria-expanded="false"
+                  aria-controls="collapseInternationalTwo">
+                  Returns
+                </button>
+              </h2>
+              <div id="collapseInternationalTwo" class="accordion-collapse collapse"
+                data-bs-parent="#accordionInternational">
+                <div class="accordion-body">
+                  <p>
+                    We accept international returns. Items must be unworn, unwashed, in their original condition and
+                    with all tags attached. Items marked Final Sale cannot be returned.
+                  </p>
+                  <a href="#">Click here to start a return.</a>
+                  <p>
+                    <u>Pre-paid Express Returns</u>
+                    <br>
+                    <a href="#">Visit our international returns portal to initiate a return.</a>
+                    A pre-paid returns label will be emailed to you. Please note, the returns label expires within
+                    14 days of issue if unused. Once you receive your returns label, book a collection or visit your
+                    nearest DHL drop off point to send your items back to us.
+                    <br>
+                    Pre-paid returns are subject to a return shipping fee which will be deducted from your refund.
+                    Please consult the international shipping & returns table above for information about
+                    country-specific returns fees.
+                  </p>
+                  <p>
+                    <u>Self-postage Returns</u>
+                    <br>
+                    <a href="#">Visit our international returns portal to initiate a return.</a>
+                    A returns slip will be emailed to you. Please include this slip in the return package. Send back
+                    the returned goods with the shipper of your choice. Please note that return shipping and any
+                    reverse duties are the responsibility of the customer when choosing this method. We recommend
+                    insuring your package and contacting our Customer Service at <a href="#">help@fashiongit.com</a>
+                    with the tracking number once shipped.
+                    <br>
+                    All returns must be <strong>postmarked within 30 days of your order date.</strong> Once your
+                    return is received back at our warehouse and inspected, your refund will be issued. Please
+                    <strong>allow up to 7-10 business days for the refund</strong> to be processed back to your
+                    original form of payment.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Electronic Gift Cards -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseInternationalThree" aria-expanded="false"
+                  aria-controls="collapseInternationalThree">
+                  Electronic Gift Cards
+                </button>
+              </h2>
+              <div id="collapseInternationalThree" class="accordion-collapse collapse"
+                data-bs-parent="#accordionInternational">
+                <div class="accordion-body">
+                  <p>
+                    Purchases of E-Gift Cards are not currently supported for international customers. If you
+                    previously purchased or received an E-Gift Card that you would like to redeem, please contact
+                    customer service.
+                  </p>
+                  <a href="#">Click here to purchase E-Gift Cards.</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Promo Terms -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">FashionGit Promo Terms</h1>
+          <p id="promoTerms">
+            The sale is valid on select items only. Eligible items will be marked with a sale price. Sale items are
+            not eligible for any other promotions or discounts. Limited quantities available.
+            <br>
+            Promotion available for a limited time, while supplies last. All sales are final and cannot be returned.
+            Discounts cannot be applied to past purchases, shipping costs, taxes, or gift card purchases.
+            <br>
+            Applicable shipping and handling charges apply to all products.
+            <br>
+            FashionGit reserves the right to modify these terms at any time without notice.
+          </p>
+          <u><em>Coupons cannot be combined.</em></u>
+          <!-- Stockists -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Stockists</h1>
+          <p id="stockists">
+            FashionGit is sold exclusively at FashionGit.com, NET-A-PORTER.com, SSENSE.com, OUNASS.com, through
+            select Nordstrom locations, Nordstrom.com, through select Saks Fifth Avenue locations,
+            Saksfifthavenue.com, David Jones and Davidjones.com, Selfridges & Co. and Selfridges.com, Galeries
+            Lafayette and Galerieslafayette.com, Harrods, and Harrods.com, Holt Renfrew, and Holtrenfrew.com, Lane
+            Crawford and LaneCrawford.com.
+          </p>
+          <a href="#support"><u><em>Click on <strong>Support</strong> in the navigation bar for direction.</em></u>
+          </a>
+          <!-- Contact Us -->
+          <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Contact Us</h1>
+          <p id="contactUs">Our customer service hours are Monday through Friday, 9am to 6pm PST.</p>
+          <p>We can help answer any questions about our products, shipping, returns, size guides, drop dates, or
+            anything else on your mind!</p>
+          <br>
+          <b>
+            <p>Live Chat</p>
+          </b>
+          <p>Need help? Contact us via live chat every day of the week 9am-5pm PST.</p>
+          <br>
+          <b>
+            <p>Text Us</p>
+          </b>
+          <p>747-777-5467</p>
+          <p>Messaging rates apply.</p>
+          <p>Please explain in detail the issue you may be experiencing and provide your email address, order number
+            and the name linked to your FashionGit account so we may assist you!</p>
+          <p><b>Email Us</b>
+            <br>Please contact us using the form below and allow 1-2 business days for your response. We recommend
+            adding help@fashiongit.com to your email contacts or allow-list to ensure that you always get our emails
+            in
+            your inbox.
+          </p>
+          <div class="form mt-5">
+            <div class="mb-2">
+              <input type="email" class="form-control" id="emailForm" placeholder="Email Address*">
+            </div>
+            <div class="mb-2">
+              <input type="name" class="form-control" id="nameForm" placeholder="Name*">
+            </div>
+            <div class="mb-2">
+              <select class="form-select" aria-label="Default select example">
+                <option value="0">Contact Reason</option>
+                <option value="1">Order</option>
+                <option value="2">Shipping</option>
+                <option value="3">Returns</option>
+                <option value="4">Others</option>
+              </select>
+            </div>
+            <div class="mb-2">
+              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="What can we help you with?"
+                rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- first column sidebar -->
+        <div class="col-2 p-0" id="sidebar">
+          <sidemenu>
+            <div class="nav flex-column linkColumn">
+              <h1>Help</h1>
+              <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" s aria-orientation="vertical">
+                <a href="#" class="nav-link active" style="background-color: var(--primary);" id="v-pills-returns-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-returns" role="tab" aria-controls="v-pills-returns"
+                  aria-selected="true">
+                  Returns
+                </a>
+                <a href="#" class="nav-link" style="background-color: var(--primary);" id="v-pills-ordering-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-ordering" role="tab" aria-controls="v-pills-ordering"
+                  aria-selected="false">
+                  Ordering
+                </a>
+                <a href="#" class="nav-link" style="background-color: var(--primary);" id="v-pills-shipping-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-shipping" role="tab" aria-controls="v-pills-shipping"
+                  aria-selected="false">
+                  Shipping
+                </a>
+                <a href="#" class="nav-link" style="background-color: var(--primary);" id="v-pills-international-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-international" role="tab"
+                  aria-controls="v-pills-international" aria-selected="false">
+                  International
+                </a>
+                <a href="#" class="nav-link" style="background-color: var(--primary);" id="v-pills-promo-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-promo" role="tab" aria-controls="v-pills-promo"
+                  aria-selected="false">
+                  Promo Terms
+                </a>
+                <a href="#" class="nav-link" style="background-color: var(--primary);" id="v-pills-stockists-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-stockists" role="tab" aria-controls="v-pills-stockists"
+                  aria-selected="false">
+                  Stockists
+                </a>
+                <a href="#" class="nav-link" style="background-color: var(--primary);" id="v-pills-contact-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-pills-contact" role="tab" aria-controls="v-pills-contact"
+                  aria-selected="false">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </sidemenu>
+        </div>
+        <!-- second column content -->
+        <div class="col contentTab" id="content">
+          <div class="tab-content" id="v-pills-tabContent">
+            <!-- Returns -->
+            <div class="tab-pane fade show active" id="v-pills-returns" role="tabpanel"
+              aria-labelledby="v-pills-returns-tab" tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Returns</h1>
+                <div class="accordion" id="accordionReturns">
+                  <!-- return policy -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseReturnsOne" aria-expanded="true" aria-controls="collapseReturnsOne">
+                        Returns Policy
+                      </button>
+                    </h2>
+                    <div id="collapseReturnsOne" class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionReturns">
+                      <div class="accordion-body">
+                        <p>Click here to start a Domestic Return or return a gift for store credit:
+                          <strong><a href="#">START A RETURN (U.S.)</a></strong>
+                        </p>
+                        <p>
+                          Click here to start an International Return:
+                          <strong><a href="#">START A RETURN (INTERNATIONAL)</a></strong>
+                        </p>
+                        <p>
+                          Domestic returns must be requested within 30 days of your order date for a refund or store
+                          credit. Once the label has been created you will have 14 days to drop it off at your local
+                          carrier in order to receive a refund. After 14 days, the return label will expire, and you
+                          will
+                          need to contact Customer Service for a new return label. This will result in the refund being
+                          issued as store credit towards a future purchase.
+                        </p>
+                        <p>
+                          Domestic returns will be subject to a $6 return shipping fee, which will be deducted from your
+                          refund. If you select store credit, the return shipping fee will be waived.
+                        </p>
+                        <p>
+                          Outbound shipping fees from the original order are not refundable.
+                        </p>
+                        <br>
+                        <p>
+                          <strong>Additional Returns Guidelines</strong>
+                        </p>
+                        <p>
+                          Products must be returned unworn, unwashed, in their original condition and with all tags and
+                          liners attached. Please include the original order packing slip in your return package.
+                          Returns
+                          of multiple orders should not be combined and will result in processing delays (additional 8
+                          business days from the first refund issued). If your order was purchased using a gift card,
+                          you
+                          will only be refunded directly back to the gift card.
+                        </p>
+                        <p>
+                          We ask that you wear underwear when first trying-on your purchase.
+                        </p>
+                        <p>
+                          We reserve the right to refuse returns that show signs of wear or do not meet the above
+                          criteria.
+                        </p>
+                        <p>
+                          Products marked Final Sale cannot be returned.
+                        </p>
+                        <p>
+                          FashionGit cannot currently create return labels for APO/FPO addresses, as they require
+                          customs
+                          information for shipping.
+                        </p>
+                        <p>
+                          International returns are accepted. Return shipping and any reverse duties are the
+                          responsibility of the customer.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- how to request a return -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseReturnsTwo" aria-expanded="false" aria-controls="collapseReturnsTwo">
+                        How To Request A Return
+                      </button>
+                    </h2>
+                    <div id="collapseReturnsTwo" class="accordion-collapse collapse" data-bs-parent="#accordionReturns">
+                      <div class="accordion-body">
+                        <p>Domestic Returns:
+                          <br>
+                          <strong>START RETURN (U.S.) </strong> <a href="#">https://returns.fashiongit.com/</a>
+                        </p>
+                        <p>
+                          Follow the steps at the portal to request your return. Please include the original order
+                          packing
+                          slip in the return package. Once your return has been created, you will receive a pre-paid
+                          return shipping label via email. Using the provided label, please drop off your package at any
+                          Post Office or USPS location.
+                        </p>
+                        <p>International Returns:
+                          <br>
+                          <strong>START RETURN (International) </strong> <a
+                            href="#">https://web.global-e.com/Returns/portal/fashiongit</a>
+                        </p>
+                        <p><u>Pre-paid Express Returns</u>
+                          <br>
+                          Visit our international returns portal to initiate a return. A pre-paid return shipping label
+                          will
+                          be emailed to you. Please note, the return label expires within 14 days of issue if unused.
+                          Using
+                          the provided label, book a collection or visit your nearest DHL drop off point to send your
+                          items
+                          back to us.
+                          <br>
+                          Pre-paid returns are subject to a return shipping fee which will be deducted from your refund.
+                          Please consult the international shipping & returns table for information about
+                          country-specific
+                          returns fees.
+                        </p>
+                        <p><u>Self-postage Returns</u>
+                          <br>
+                          You can send back the returned goods with the shipper of your choice at your expense. Visit
+                          our
+                          international returns portal to initiate a return and a returns slip will be emailed to you.
+                          We
+                          recommend insuring your package and contacting our Customer Service at help@fashiongit.com
+                          with
+                          the
+                          tracking number once shipped.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- refunds -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseReturnsThree" aria-expanded="false"
+                        aria-controls="collapseReturnsThree">
+                        Refunds
+                      </button>
+                    </h2>
+                    <div id="collapseReturnsThree" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionReturns">
+                      <div class="accordion-body">
+                        <p>
+                          Once your return is received and inspected, we will notify you if your return is accepted or
+                          declined. This process can take up to 7 business days from the date your return tracking
+                          information shows delivered.
+                        </p>
+                        <p>
+                          If your return is accepted, your refund will be processed and applied to the original method
+                          of
+                          payment.
+                        </p>
+                        <p>
+                          Please note that refunds can take up to 3-5 business days to appear on your bank account due
+                          to
+                          varying processing times of financial organizations.
+                        </p>
+                        <p>
+                          Where returns are processed for store credit, a SKIMS gift card will be issued once your
+                          return
+                          order is in transit back to us, and sent to the email used to make the original purchase.
+                          Gift returns exchanged for store credit will be issued as a SKIMS gift card to the gift
+                          recipient,
+                          once the return order is in transit back to us.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- shipping fees -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseReturnsFour" aria-expanded="false" aria-controls="collapseReturnsFour">
+                        Shipping Fees
+                      </button>
+                    </h2>
+                    <div id="collapseReturnsFour" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionReturns">
+                      <div class="accordion-body">
+                        <p>
+                          Outbound shipping fees from the original order are not refundable.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ordering -->
+            <div class="tab-pane fade" id="v-pills-ordering" role="tabpanel" aria-labelledby="v-pills-ordering-tab"
+              tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Ordering</h1>
+                <div class="accordion" id="accordionOrdering">
+                  <!-- where to shop -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingOne" aria-expanded="false" aria-controls="collapseOrderingOne">
+                        Where To Shop
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingOne" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          FashionGit is sold exclusively at FashionGit.com, NET-A-PORTER.com, SSENSE.com, OUNASS.com,
+                          through select
+                          Nordstrom locations, Nordstrom.com, through select Saks Fifth Avenue locations,
+                          Saksfifthavenue.com, Selfridges & Co. and Selfridges.com. To see our stockist locations click
+                          here. Be the first to know about new collections, restocks, and more by signing up for emails.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Processing Times -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingTwo" aria-expanded="false" aria-controls="collapseOrderingTwo">
+                        Processing Times
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingTwo" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          Orders are processed pending item availability and payment approval. During high volume
+                          periods,
+                          product availability may be subject to change while your order is being processed.
+                        </p>
+                        <p>
+                          Most orders placed Monday through Friday will be processed and shipped within 1-2 business
+                          days.
+                        </p>
+                        <p>
+                          Orders placed on Friday or over the weekend will start processing on Monday and ship within
+                          1-2
+                          business days.
+                        </p>
+                        <p>
+                          Certain products may have longer processing times. These will be noted on the product and cart
+                          pages.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Pre-orders -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingTwo" aria-expanded="false" aria-controls="collapseOrderingTwo">
+                        Pre-Orders
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingTwo" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          Items available for pre-order will be indicated on the product page with the anticipated ship
+                          date. Please note, once your order is placed, the full payment will be captured up front. If
+                          you
+                          wish to cancel your order before the ship date, you may do so by contacting Customer Service.
+                        </p>
+                        <p>
+                          If your order contains pre-order items and available items, please note that your order will
+                          be
+                          shipped once the pre-order item(s)are received.
+                        </p>
+                        <p>
+                          We are not able to split orders and ship available items first. If you wish to purchase
+                          pre-order items and available items together, we recommend placing a separate orders for each.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- International -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingThree" aria-expanded="false"
+                        aria-controls="collapseOrderingThree">
+                        International
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingThree" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          For more information about international shopping, visit <a
+                            href="#v-pills-international-tab">fashiongit.com/international</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Order Tracking -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingFour" aria-expanded="false"
+                        aria-controls="collapseOrderingFour">
+                        Order Tracking
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingFour" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          Once your order has been shipped, you will receive an e-mail notification containing the
+                          shipment tracking information.
+                        </p>
+                        <p>
+                          Your order may arrive in several shipments. You will receive a separate e-mail notification
+                          for
+                          each shipment.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Taxes -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingFive" aria-expanded="false"
+                        aria-controls="collapseOrderingFive">
+                        Taxes
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingFive" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          To the extent that we are required by law to charge and collect taxes on products that we
+                          sell,
+                          such taxes are charged based on the tax laws applicable to the location to which the order is
+                          being shipped or delivered. At checkout, all appropriate taxes will be added to the order
+                          total.
+                          The tax amount displayed during checkout is an estimate of the tax applicable to your order.
+                          This amount may vary slightly from the actual amount of tax payable in connection with your
+                          order due to different tax rates which apply as a result of the origin and destination of the
+                          item(s) being purchased, as well as other factors.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Payment Options -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingSix" aria-expanded="false" aria-controls="collapseOrderingSix">
+                        Payment Options
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingSix" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          Credit Cards
+                          <br>
+                          We accept Visa, MasterCard, American Express, and Discover cards. Payment is taken once your
+                          order has been shipped. (excluding pre-orders)
+                        </p>
+                        <p>
+                          PayPal
+                          <br>
+                          When selecting this option at checkout, you will be directed to the PayPal site to 'Log In'
+                          and
+                          review before clicking 'checkout Now'. Once this transaction is complete, you will then return
+                          to <a href="./index.html">FashionGit.com.</a>
+                        </p>
+                        Afterpay
+                        <br>
+                        Simply shop and proceed to checkout as usual. At checkout, you will choose Afterpay as your
+                        payment method. You will then be directed to the Afterpay website to register and provide
+                        payment
+                        details. If you are already an Afterpay user, just log in to your Afterpay account. Then
+                        complete
+                        your order.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Updationg Orders -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingSeven" aria-expanded="false"
+                        aria-controls="collapseOrderingSeven">
+                        Updationg Orders
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingSeven" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          Orders cannot be changed or updated once they are placed as they immediately start processing.
+                        </p>
+                        <p>
+                          If you'd like to add another item to your order, please place a new order for the item.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Orders Cancellation -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingEight" aria-expanded="false"
+                        aria-controls="collapseOrderingEight">
+                        Orders Cancellation
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingEight" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          We are usually unable to change or cancel an order after you've placed it.
+                        </p>
+                        <p>
+                          It is possible that your order may be cancelled during high volume periods due to inventory
+                          selling out. If your order is cancelled, all charges will be automatically refunded. We
+                          recommend trying to place your order again or signing up for our waitlist for the sold out
+                          item.
+                        </p>
+                        <p>
+                          To ensure your security, we take additional steps in verifying the details on your order. If
+                          you
+                          receive a cancellation notification, please contact Customer Service for more information.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Changing Shipping Address -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOrderingNine" aria-expanded="false"
+                        aria-controls="collapseOrderingNine">
+                        Changing Shipping Address
+                      </button>
+                    </h2>
+                    <div id="collapseOrderingNine" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionOrdering">
+                      <div class="accordion-body">
+                        <p>
+                          Shipping addresses cannot be changed. We will only ship to the shipping address entered when
+                          the
+                          order was originally placed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Shipping -->
+            <div class="tab-pane fade" id="v-pills-shipping" role="tabpanel" aria-labelledby="v-pills-shipping-tab"
+              tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Shipping</h1>
+                <div class="accordion" id="accordionShipping">
+                  <!-- Ship Methods -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseShippingOne" aria-expanded="false" aria-controls="collapseShippingOne">
+                        Ship Methods
+                      </button>
+                    </h2>
+                    <div id="collapseShippingOne" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionShipping">
+                      <div class="accordion-body">
+                        <p>
+                          We offer free shipping on all orders over $75 in the U.S.
+                        </p>
+                        <p>
+                          We have the following shipping options available in the U.S.
+                        </p>
+                        <p><strong>Economy </strong> - Delivery in 5 to 8 Business Days via UPS or DHL eCommerce
+                          <br>
+                          <strong>Ground </strong> - Delivery in 4 to 6 Business Days via UPS
+                          <br>
+                          <strong>Express </strong> - Order by Noon ET. <strong>Processing begins that same day.
+                          </strong>Delivery in 2 to 3 Business Days via UPS
+                          <br>
+                          <strong>Priority </strong> - Order by Noon ET. <strong>Processing begins that same
+                            day.</strong>
+                          Delivery in 1 to 2 Business Days via UPS
+                        </p>
+                        <p>
+                          Please allow up to 1-2 business days for processing before orders ship from our warehouse.
+                        </p>
+                        <p>
+                          If shipping to a P.O. Box or APO/FPO address, you must select Economy. Please note transit
+                          times
+                          will vary.
+                        </p>
+                        <p>
+                          Please note we do not ship to freight forwarding address.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2hrs Local Delivery (LA only) -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseShippingTwo" aria-expanded="false" aria-controls="collapseShippingTwo">
+                        2hrs Local Delivery (LA only)
+                      </button>
+                    </h2>
+                    <div id="collapseShippingTwo" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionShipping">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>Delivery in 2 hours ($10)</strong>
+                        </p>
+                        <p>
+                          We offer local 2-hour delivery for a select region within Los Angeles City.
+                          <br>
+                          Customers in an eligible zip code will be able to ship a subset of our best selling styles to
+                          their home within 2 hours. Delivery is carried out in partnership with Uber and orders must be
+                          placed between 10am – 7pm P.T. Monday-Thursday and 10am – 5pm PT: Friday-Sunday
+                        </p>
+                        <p>
+                          Our delivery region covers zip codes within 10 miles of 90004.
+                        </p>
+                        <p>
+                          Delivery updates will be sent via email or SMS, and you’ll be notified as your driver is
+                          approaching. Please be ready to accept your order in person by showing a valid form of ID and
+                          your order confirmation.
+                          <br>
+                          If you will not be home, please indicate prior to checkout whether you would like the driver
+                          to
+                          leave the package in a safe space or return to our warehouse.
+                          For assistance, please contact help@fashiongit.com with the email subject: 2 hour delivery.
+                          Alternatively, you can chat with one of our agents who can assist you.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Shipment Tracking -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseShippingThree" aria-expanded="false"
+                        aria-controls="collapseShippingThree">
+                        Shipment Tracking
+                      </button>
+                    </h2>
+                    <div id="collapseShippingThree" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionShipping">
+                      <div class="accordion-body">
+                        <p>
+                          You can track your order with the tracking information provided in your shipment notification
+                          e-mail or by logging in to your account on <a href="./index.html">fashiongit.com</a>
+                        </p>
+                        <p>
+                          If the carrier’s tracking link for your order is not showing activity or movement for more
+                          than
+                          5 business days, please contact Customer Service to investigate.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Changing Shipping Address -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseShippingFour" aria-expanded="false"
+                        aria-controls="collapseShippingFour">
+                        Changing Shipping Address
+                      </button>
+                    </h2>
+                    <div id="collapseShippingFour" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionShipping">
+                      <div class="accordion-body">
+                        <p>
+                          Shipping addresses cannot be changed. We will only ship to the shipping address entered when
+                          the
+                          order was originally placed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Lost Or Stolen Packages -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseShippingFive" aria-expanded="false"
+                        aria-controls="collapseShippingFive">
+                        Lost Or Stolen Packages
+                      </button>
+                    </h2>
+                    <div id="collapseShippingFive" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionShipping">
+                      <div class="accordion-body">
+                        <p>
+                          We know carrier issues and delays can happen. We find that some carriers may scan a package as
+                          <em>“Delivered”</em> when it is still out for delivery and will sometimes physically deliver
+                          the
+                          parcel within the next four business days.
+                        </p>
+                        <p>
+                          After <strong>4 business days</strong>, if your order is showing as <em>“Delivered”</em> by
+                          the
+                          carrier, and you have still not located your package, and you have checked the area
+                          surrounding
+                          your delivery address please contact Customer Service for assistance.
+                        </p>
+                        <p>
+                          Please note, FashionGit is not liable for missing packages marked delivered. If you believe
+                          this
+                          was mis-delivered, we recommend filing a claim with the carrier directly. At this time, we're
+                          not currently set up for reshipment orders or exchanges and require that a new order is placed
+                          with the returned funds.
+                        </p>
+                        <p>
+                          If the carrier’s tracking link for your order is not showing activity or movement for more
+                          than
+                          5 business days, please contact Customer Service to investigate.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- International -->
+            <div class="tab-pane fade" id="v-pills-international" role="tabpanel"
+              aria-labelledby="v-pills-international-tab" tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">International</h1>
+                <h5>INTERNATIONAL SHIPPING & RETURNS</h5>
+                <p>
+                  International customers can browse and shop our website in their local currency by selecting their
+                  country from the dropdown menu in the main navigation. We offer Standard (via RRD) and Express (via
+                  DHL)
+                  shipping options depending on the destination country. Reference the table below for shipping times
+                  and
+                  returns fees to your country.
+                </p>
+                <table class="table table-bordered my-5 text-center">
+                  <thead class="fw-medium">
+                    <tr>
+                      <td>COUNTRY</td>
+                      <td>STANDARD TRANSIT TIME</td>
+                      <td>STANDARD SHIPPING FEES</td>
+                      <td>EXPRESS TRANSIT TIME</td>
+                      <td>EXPRESS SHIPPING FEES</td>
+                      <td>DUTY & SALES TAX</td>
+                      <td>PRE-PAID EXPRESS RETURNS FEES</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-medium">AUSTRALIA</td>
+                      <td>12 - 18</td>
+                      <td>€10</td>
+                      <td>4 - 7</td>
+                      <td>€15 or free on orders €85+</td>
+                      <td>Included</td>
+                      <td>€15</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">BELGIUM</td>
+                      <td>12 - 18</td>
+                      <td>$10</td>
+                      <td>6 - 9</td>
+                      <td>$15 or free on orders $125+</td>
+                      <td>Included</td>
+                      <td>$23</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">CANADA</td>
+                      <td>10 - 16</td>
+                      <td>$10</td>
+                      <td>5 - 9</td>
+                      <td>$15 or free on orders CA$115+</td>
+                      <td>Partially Included</td>
+                      <td>$21</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">DENMARK</td>
+                      <td>10 - 16</td>
+                      <td>75Kr</td>
+                      <td>4 - 7</td>
+                      <td>100Kr or free on orders 770Kr+</td>
+                      <td>Included</td>
+                      <td>100Kr</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">GERMANY</td>
+                      <td>10 - 16</td>
+                      <td>€10</td>
+                      <td>5 - 8</td>
+                      <td>€15 or free on orders €85+</td>
+                      <td>Included</td>
+                      <td>€15</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">SWITZERLAND</td>
+                      <td>10 - 18</td>
+                      <td>CH9</td>
+                      <td>4 - 7</td>
+                      <td>CHF14 or free on orders CHF115+ </td>
+                      <td>Included</td>
+                      <td>CHF14</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">UNITED KINGDOM</td>
+                      <td>10 - 16</td>
+                      <td>£10</td>
+                      <td>4 - 7</td>
+                      <td>£15 or free on orders £70+</td>
+                      <td>Included</td>
+                      <td>£15</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-medium">REST OF WORLD</td>
+                      <td>10 - 18</td>
+                      <td>Fees apply</td>
+                      <td>5 - 10</td>
+                      <td>Fees apply</td>
+                      <td>Not included - payable at checkout</td>
+                      <td>USD$15 (or local currency equivalent)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="accordion" id="accordionInternational">
+                  <!-- Duties and Taxes -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInternationalOne" aria-expanded="false"
+                        aria-controls="collapseInternationalOne">
+                        Duties and Taxes
+                      </button>
+                    </h2>
+                    <div id="collapseInternationalOne" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionInternational">
+                      <div class="accordion-body">
+                        <p>
+                          For orders going to the United Kingdom, European Union, Mexico, Australia and New Zealand, all
+                          prices shown are inclusive of import duties and taxes.
+                        </p>
+                        <p>
+                          For all other countries, duties & taxes will be automatically calculated and displayed during
+                          checkout. Depending on the country, you will have the option to choose DDP (Delivery Duty
+                          Paid)
+                          or DDU (Delivery Duty Unpaid).
+                        </p>
+                        <p>
+                          Please note that if DDU is selected, you will be responsible for paying the required duties &
+                          taxes upon delivery and the shipping carrier may not release the package without payment for
+                          duties & taxes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Returns -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInternationalTwo" aria-expanded="false"
+                        aria-controls="collapseInternationalTwo">
+                        Returns
+                      </button>
+                    </h2>
+                    <div id="collapseInternationalTwo" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionInternational">
+                      <div class="accordion-body">
+                        <p>
+                          We accept international returns. Items must be unworn, unwashed, in their original condition
+                          and
+                          with all tags attached. Items marked Final Sale cannot be returned.
+                        </p>
+                        <a href="#">Click here to start a return.</a>
+                        <p>
+                          <u>Pre-paid Express Returns</u>
+                          <br>
+                          <a href="#">Visit our international returns portal to initiate a return.</a>
+                          A pre-paid returns label will be emailed to you. Please note, the returns label expires within
+                          14 days of issue if unused. Once you receive your returns label, book a collection or visit
+                          your
+                          nearest DHL drop off point to send your items back to us.
+                          <br>
+                          Pre-paid returns are subject to a return shipping fee which will be deducted from your refund.
+                          Please consult the international shipping & returns table above for information about
+                          country-specific returns fees.
+                        </p>
+                        <p>
+                          <u>Self-postage Returns</u>
+                          <br>
+                          <a href="#">Visit our international returns portal to initiate a return.</a>
+                          A returns slip will be emailed to you. Please include this slip in the return package. Send
+                          back
+                          the returned goods with the shipper of your choice. Please note that return shipping and any
+                          reverse duties are the responsibility of the customer when choosing this method. We recommend
+                          insuring your package and contacting our Customer Service at <a
+                            href="#">help@fashiongit.com</a>
+                          with the tracking number once shipped.
+                          <br>
+                          All returns must be <strong>postmarked within 30 days of your order date.</strong> Once your
+                          return is received back at our warehouse and inspected, your refund will be issued. Please
+                          <strong>allow up to 7-10 business days for the refund</strong> to be processed back to your
+                          original form of payment.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Electronic Gift Cards -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInternationalThree" aria-expanded="false"
+                        aria-controls="collapseInternationalThree">
+                        Electronic Gift Cards
+                      </button>
+                    </h2>
+                    <div id="collapseInternationalThree" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionInternational">
+                      <div class="accordion-body">
+                        <p>
+                          Purchases of E-Gift Cards are not currently supported for international customers. If you
+                          previously purchased or received an E-Gift Card that you would like to redeem, please contact
+                          customer service.
+                        </p>
+                        <a href="#">Click here to purchase E-Gift Cards.</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Promo Terms -->
+            <div class="tab-pane fade" id="v-pills-promo" role="tabpanel" aria-labelledby="v-pills-promo-tab"
+              tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">FashionGit Promo Terms</h1>
+                <p>
+                  The sale is valid on select items only. Eligible items will be marked with a sale price. Sale items
+                  are
+                  not eligible for any other promotions or discounts. Limited quantities available.
+                  <br>
+                  Promotion available for a limited time, while supplies last. All sales are final and cannot be
+                  returned.
+                  Discounts cannot be applied to past purchases, shipping costs, taxes, or gift card purchases.
+                  <br>
+                  Applicable shipping and handling charges apply to all products.
+                  <br>
+                  FashionGit reserves the right to modify these terms at any time without notice.
+                </p>
+                <u><em>Coupons cannot be combined.</em></u>
+              </div>
+            </div>
+            <!-- Stockists -->
+            <div class="tab-pane fade" id="v-pills-stockists" role="tabpanel" aria-labelledby="v-pills-stockists-tab"
+              tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Stockists</h1>
+                <p>
+                  FashionGit is sold exclusively at FashionGit.com, NET-A-PORTER.com, SSENSE.com, OUNASS.com, through
+                  select Nordstrom locations, Nordstrom.com, through select Saks Fifth Avenue locations,
+                  Saksfifthavenue.com, David Jones and Davidjones.com, Selfridges & Co. and Selfridges.com, Galeries
+                  Lafayette and Galerieslafayette.com, Harrods, and Harrods.com, Holt Renfrew, and Holtrenfrew.com, Lane
+                  Crawford and LaneCrawford.com.
+                </p>
+                <a href="#support"><u><em>Click on <strong>Support</strong> in the navigation bar for
+                      direction.</em></u>
+                </a>
+              </div>
+            </div>
+            <!-- Contact Us -->
+            <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab"
+              tabindex="0">
+              <div>
+                <h1 style="margin: 90px 0 40px; font-family: 'Squada One', cursive;">Contact Us</h1>
+                <p>Our customer service hours are Monday through Friday, 9am to 6pm PST.</p>
+                <p>We can help answer any questions about our products, shipping, returns, size guides, drop dates, or
+                  anything else on your mind!</p>
+                <br>
+                <b>
+                  <p>Live Chat</p>
+                </b>
+                <p>Need help? Contact us via live chat every day of the week 9am-5pm PST.</p>
+                <br>
+                <b>
+                  <p>Text Us</p>
+                </b>
+                <p>747-777-5467</p>
+                <p>Messaging rates apply.</p>
+                <p>Please explain in detail the issue you may be experiencing and provide your email address, order
+                  number
+                  and the name linked to your FashionGit account so we may assist you!</p>
+                <p><b>Email Us</b>
+                  <br>Please contact us using the form below and allow 1-2 business days for your response. We recommend
+                  adding help@fashiongit.com to your email contacts or allow-list to ensure that you always get our
+                  emails
+                  in
+                  your inbox.
+                </p>
+                <div class="form mt-5">
+                  <div class="mb-2">
+                    <input type="email" class="form-control" id="emailForm" placeholder="Email Address*">
+                  </div>
+                  <div class="mb-2">
+                    <input type="name" class="form-control" id="nameForm" placeholder="Name*">
+                  </div>
+                  <div class="mb-2">
+                    <select class="form-select" aria-label="Default select example">
+                      <option value="0">Contact Reason</option>
+                      <option value="1">Order</option>
+                      <option value="2">Shipping</option>
+                      <option value="3">Returns</option>
+                      <option value="4">Others</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                      placeholder="What can we help you with?" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 column">
+            <h5>Help</h5>
+            <ul class="list-unstyled">
+              <li><a href="./help.html#v-pills-returns-tab">Return Policy</a></li>
+              <li><a href="./help.html#v-pills-returns-tab">Start a Return</a></li>
+              <li><a href="./help.html#v-pills-ordering-tab">Track Order</a></li>
+              <li><a href="./help.html#v-pills-ordering-tab">Odering</a></li>
+              <li><a href="./help.html#v-pills-shipping-tab">Shipping</a></li>
+              <li><a href="./help.html#v-pills-international-tab">International</a></li>
+              <li><a href="./careers.html">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 column">
+            <p class="contentHash">Stay In The Know</p>
+            <p>Be the first one to recevie new releases, special offers, and more</p>
+            <form class="text-start my-5">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Your Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="name@example.com" style="background-color: var(--primary); border-bottom: 2px solid;">
+                <div id="emailHelp" class="form-text">
+                  By signing up, you agree to receive recurring automated marketing messages from FashionGit. View <a
+                    href="./terms&Privacy.html">Terms and Privacy</a>
+                </div>
+              </div>
+            </form>
+            <p>Text <b>FashionGit</b> to <b>65598</b> to never miss a drop!</p>
+            <p style="font-size: 12px;">By signing up via text, you agree to receive recurring automated promotional and
+              personalized marketing text messages (e.g. cart reminders)
+              from SKIMS at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP
+              for help and STOP to cancel. Msg frequency varies. Msg & data rates may apply. View
+              <a href="./terms&Privacy.html">Terms and Privacy</a>
+            </p>
+            <ul class="list-inline social-icons">
+              <li>
+                <a href="https://www.instagram.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-facebook fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-pinterest fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@FashionGit" target="_blank">
+                  <i class="fa-brands fa-youtube fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@FashionGit" target="_blank">
+                  <i class="fa-brands fa-tiktok fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 column">
+            <div class="ms-auto">
+              <h5>More</h5>
+              <ul class="list-unstyled">
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="./influencer.html">Influencer</a></li>
+                <li><a href="./help.html#v-pills-stockists-tab">Stockists</a></li>
+                <li><a href="./eGiftCart.html">E-gift Card</a></li>
+                <li><a href="./help.html#v-pills-contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 column d-flex">
+            <!-- Button trigger modal -->
+            <a href="#" class="me-5" data-bs-toggle="modal" data-bs-target="#countryCurrencyModal">
+              Country and Currency Selection
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" id="countryCurrencyModal" tabindex="-1" aria-labelledby="countryCurrencyModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: var(--primary);">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="countryCurrencyModalLabel">Country and Currency Selection</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Country Selection -->
+                    <div class="mb-3">
+                      <label for="countrySelect" class="form-label">Select Country</label>
+                      <select class="form-select" id="countrySelect" style="background-color: var(--primary);">
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="currencySelect" class="form-label">Select Currency</label>
+                      <select class="form-select" id="currencySelect" style="background-color: var(--primary);">
+                        <option value="usd">USD</option>
+                        <option value="gbp">GBP</option>
+                        <option value="cad">CAD</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" style="background-color: var(--warning);">Save
+                      changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="mx-auto">&copy; 2023 FashionGit. All rights reserved.</p>
+            <div class="ms-auto">
+              <a href="./accessbility.html" class="me-2">Accessbility</a>
+              <a href="./terms&Privacy.html#Privacy" class="me-2">Privacy</a>
+              <a href="./terms&Privacy.html#Terms" class="me-2">Terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top button -->
+    <div id="backToTopBtn" class="back-to-top-btn home-btt">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </div>
+
+  <!-- back-to-top-btn script -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    document.getElementById('backToTopBtn').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  
+  <script src="main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <!-- loader logo -->
+  <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>

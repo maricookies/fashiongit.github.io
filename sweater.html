@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Tone Drop Shoulder Sweater</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  <style>
+    .centered-offcanvas {
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      left: 25%;
+      right: 25%;
+    }
+
+    .offcanvas.offcanvas-top {
+      width: 900px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <!-- preloader -->
+  <div id="loader"></div>
+
+  <div style="display: none;" id="myDiv" class="animate-bottom">
+    <!-- First Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-first bg-body-white">
+      <div class="container-fluid">
+        <!-- Use responsive utility class to hide the navbar-collapse on smaller screens -->
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="./index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#supportModal">
+                <i class="fa-solid fa-headset"></i>
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo-container justify-content-center">
+          <a class="navbar-brand" href="./index.html">
+            <img src="images/logo.png" alt="" width="75px" height="70px">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active me-3" id="heart" href="#" data-bs-toggle="modal"
+                data-bs-target="#subscribeModal">
+                <i class="fa-solid fa-heart"></i>
+                0
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
+                aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content" style="background-color: var(--primary);">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Like our items and stay updated with our latest products and offers. Subscribe to our
+                        newsletter
+                        now!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-light"
+                        style="background-color: var(--warning);">Subscribe</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link active me-3" id="cartLink">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="./login.html">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                SignIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Support Modal -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" style="background-color: var(--primary);">
+          <div class="modal-header">
+            <h4 class="modal-title" id="supportModalLabel">Contact Support</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>If you need assistance, please contact our support team:</p>
+            <ul>
+              <li>Email: support@fashiongit.com.</li>
+              <li>Phone: 123-456-7890</li>
+            </ul>
+            <p>We are opening everyday at 9 am to 8 pm.</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.7926300677805!2d77.54404977459595!3d10.11605337102793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0769493fed283d%3A0x3e7ea51ae0ad77a2!2sGIT%20Elite%20fashion!5e0!3m2!1sen!2smm!4v1691119628553!5m2!1sen!2smm"
+              width="466" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-white home-cat-nav">
+      <div class="container-fluid pb-2">
+        <!-- Toggler button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <a href="./index.html">
+            <img src="images/logo.png" alt="" width="75px" height="70px" class="d-lg-none">
+          </a>
+        </button>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-lg-none flex-row">
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="./index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#supportModal">
+              <i class="fa-solid fa-headset"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" id="heart" href="#" data-bs-toggle="modal"
+              data-bs-target="#subscribeModalDrop">
+              <i class="fa-solid fa-heart"></i>
+              0
+            </a>
+            <!-- Heart Modal -->
+            <div class="modal fade" id="subscribeModalDrop" tabindex="-1" aria-labelledby="subscribeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: var(--primary);">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Like our items and stay updated with our latest products and offers. Subscribe to our newsletter
+                      now!</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light"
+                      style="background-color: var(--warning);">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link active me-3" id="cartLink">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartItemCount">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="./login.html">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-close-white " data-bs-toggle="dropdown" aria-expanded="false">
+                CONTENT
+                <i class="fa-solid fa-bars mx-2"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#sweaterMain">Sweater</a></li>
+                <li><a class="dropdown-item" href="#sweaterMoreSyles">More Syles</a></li>
+                <li><a class="dropdown-item" href="#sweaterMoreColour">More In This Colour</a></li>
+                <li><a class="dropdown-item" href="#footer">More</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./kidsWear.html">
+                KIDS' WEARS
+              </a>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./ladiesWear.html">
+                LADIES' WEARS
+              </a>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./madamsWear.html">
+                MADAMS' WEARS
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex me-3" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="search your unique style" aria-label="Search"
+              id="searchInput">
+            <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- breadcrumb -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <div class="container my-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">HOME</a></li>
+          <li class="breadcrumb-item"><a href="./ladiesWear.html">LADIES' WEARS</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Two Tone Drop Shoulder Sweater</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- main content -->
+    <main id="sweaterMain">
+      <div class="contianer detialMain">
+        <div class="detialMainRow row">
+          <!-- First Column Sidebar -->
+          <div class="col-3 p-0 " id="sidebarProd" style="width: 12%;">
+            <!-- col-1 -->
+            <div class="side-menu">
+              <a href="#" class="sidebar-image-link">
+                <img src="images/1.jpg" alt="" class="prodList_img object-fit-cover border rounded">
+              </a>
+              <a href="#" class="sidebar-image-link">
+                <img src="images/1-back.jpg" alt="" class="prodList_img object-fit-cover border rounded">
+              </a>
+              <!-- col-2 -->
+              <a href="#" class="sidebar-image-link">
+                <img src="images/s-col-2.jpg" alt="" class="prodList_img object-fit-cover border rounded">
+              </a>
+              <a href="#" class="sidebar-image-link">
+                <img src="images/s-col-2-back.jpg" alt="" class="prodList_img object-fit-cover border rounded">
+              </a>
+              <!-- col-3 -->
+              <a href="#" class="sidebar-image-link">
+                <img src="images/s-col-3.jpg" alt="" class="prodList_img object-fit-cover border rounded">
+              </a>
+              <a href="#" class="sidebar-image-link">
+                <img src="images/s-col-3-back.jpg" alt="" class="prodList_img object-fit-cover border rounded">
+              </a>
+            </div>
+          </div>
+
+          <!-- Second Column Carousel -->
+          <div class="col-6 text-center m-2">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <a href="#">
+                  <!-- carouselItem1 -->
+                  <div class="carousel-item active" id="carouselItem1">
+                    <img src="images/1.jpg" alt="" class="carouselImage object-fit-cover border rounded">
+                  </div>
+                </a>
+                <div class="carousel-item" id="carouselItem1-back">
+                  <a href="#">
+                    <img src="images/1-back.jpg" alt="" class="carouselImage object-fit-cover border rounded">
+                  </a>
+                </div>
+                <!-- carouselItem2 -->
+                <div class="carousel-item" id="carouselItem2">
+                  <a href="#">
+                    <img src="images/s-col-2.jpg" alt="" class="carouselImage object-fit-cover border rounded">
+                  </a>
+                </div>
+                <div class="carousel-item" id="carouselItem2-back">
+                  <a href="#">
+                    <img src="images/s-col-2-back.jpg" alt="" class="carouselImage object-fit-cover border rounded">
+                  </a>
+                </div>
+                <!-- carouselItem3 -->
+                <div class="carousel-item" id="carouselItem3">
+                  <a href="#">
+                    <img src="images/s-col-3.jpg" alt="" class="carouselImage object-fit-cover border rounded">
+                  </a>
+                </div>
+                <div class="carousel-item" id="carouselItem3-back">
+                  <a href="#">
+                    <img src="images/s-col-3-back.jpg" alt="" class="carouselImage object-fit-cover border rounded">
+                  </a>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Third Column Description -->
+          <div class="col p-0 thirdColCarousel" style="width: 39%;">
+            <div class="mb-3">
+              <p class="price-through">Fit Everybody</p>
+              <div class="d-flex">
+                <a href="#" class="description">Two Tone Drop Shoulder Sweater</a>
+                <p class="description ms-auto">$20.99</p>
+              </div>
+              <div class="d-flex mt-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <p class="price-through ms-3">580 reviews</p>
+              </div>
+            </div>
+            <div class="mb-4">
+              <p class="description-faint">Limited Editon</p>
+              <div class="my-2">
+                <a href="#" class="circle-image-link" data-target="carouselItem1">
+                  <img src="images/1.jpg" alt="Image Description">
+                </a>
+              </div>
+            </div>
+            <div class="mb-4">
+              <p class="description-faint">Classic Shades</p>
+              <div class="my-2">
+                <a href="#" class="circle-image-link" data-target="carouselItem2">
+                  <img src="images/s-col-2.jpg" alt="Image Description">
+                </a>
+                <a href="#" class="circle-image-link" data-target="carouselItem3">
+                  <img src="images/s-col-3.jpg" alt="Image Description">
+                </a>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex">
+                <p class="description-faint">Size</p>
+                <a href="#" class="ms-auto" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                  aria-controls="offcanvasTop" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                  Size Guide</a>
+                <div class="offcanvas offcanvas-top" tabindex="-1"
+                  style="margin: auto; background-color: var(--primary); border-radius: 7px;" data-bs-backdrop="static"
+                  id="offcanvasTop" id="staticBackdrop" aria-labelledby="offcanvasTopLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasTopLabel" id="staticBackdropLabel"
+                      style="transform: translateY(-50%); margin: auto; margin-top: 10px;">Size Guide</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="container mt-2">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Sizes</th>
+                            <th>US Numeric</th>
+                            <th>Burst</th>
+                            <th>Waist</th>
+                            <th>Hips</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>XXS</td>
+                            <td>00</td>
+                            <td>30-31"</td>
+                            <td>23-24"</td>
+                            <td>31-34"</td>
+                          </tr>
+                          <tr>
+                            <td>XS</td>
+                            <td>0-2</td>
+                            <td>31.5-33.5"</td>
+                            <td>24-26"</td>
+                            <td>34-36.5"</td>
+                          </tr>
+                          <tr>
+                            <td>S</td>
+                            <td>4-6</td>
+                            <td>34-36"</td>
+                            <td>26.5-28.5"</td>
+                            <td>37-39"</td>
+                          </tr>
+                          <tr>
+                            <td>M</td>
+                            <td>8-10</td>
+                            <td>36.5-38.5"</td>
+                            <td>29-31"</td>
+                            <td>39.5-41.5"</td>
+                          </tr>
+                          <tr>
+                            <td>L</td>
+                            <td>12-14</td>
+                            <td>39-41"</td>
+                            <td>31.5-34.5"</td>
+                            <td>42-44"</td>
+                          </tr>
+                          <tr>
+                            <td>XL</td>
+                            <td>16</td>
+                            <td>41.5-44.5"</td>
+                            <td>35-38"</td>
+                            <td>44.5-47.5"</td>
+                          </tr>
+                          <tr>
+                            <td>2XL</td>
+                            <td>18-20</td>
+                            <td>45-48"</td>
+                            <td>38.5-41.5"</td>
+                            <td>48-51"</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-3">
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">XXS</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">XS</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">S</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">M</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">L</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">XL</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark btn-size mb-2">2XL</button></a>
+                <a href=""><button type="button" class="btn btn-outline-dark mb-2">3XL</button></a>
+              </div>
+              <div class="d-flex">
+                <button type="button" class="btn btn-dark addToCart_Detail">Add to cart</button>
+                <a href="#heart" class="ms-auto my-auto">
+                  <button type="button" class="btn btn-outline-dark btn-size" data-bs-toggle="tooltip"
+                    data-bs-placement="right" title="Click on the heart on the Navigation!">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </a>
+                <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+              </div>
+              <div class="my-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Details
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                      <div class="accordion-body">
+                        <ul class="list-unstyled">
+                          <li>Color: Multicolor</li>
+                          <li>Style: Casual</li>
+                          <li>Pattern Type: Geometric</li>
+                          <li>Neckline: Round Neck</li>
+                          <li>Details: Patched</li>
+                          <li>Sleeve Type: Regular Sleeve</li>
+                          <li>Length: Crop</li>
+                          <li>Fit Type: Slim Fit</li>
+                          <li>Fabric: High Stretch</li>
+                          <li>Material: Knitted Fabric</li>
+                          <li>Composition: 97% Polyester, 3% Elastane</li>
+                          <li>Care Instructions: Machine wash or professional dry clean</li>
+                          <li>Sheer: No</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        Shipping & Retruns
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <p>We offer free shipping on all orders over $75 in the U.S.</p>
+                        <p>We have the following shipping options available in the U.S.</p>
+                        <p>
+                          Economy - Delivery in 5 to 8 Business Days via UPS or DHL eCommerce
+                          <br>
+                          Ground - Delivery in 4 to 6 Business Days via UPS
+                          <br>
+                          Express - Order by Noon ET. Processing begins that same day. Delivery in 2 to 3 Business Days
+                          via
+                          UPS
+                          <br>
+                          Priority - Order by Noon ET. Processing begins that same day. Delivery in 1 to 2 Business Days
+                          via
+                          UPS
+                        </p>
+                        Please allow up to 1-2 business days for processing before orders ship from our warehouse.
+                        If shipping to a P.O. Box or APO/FPO address, you must select Economy. Please note transit times
+                        will vary.
+                        Please note we do not ship to freight forwarding address.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        About Us
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        Welcome to <strong>FashionGit</strong>, where we celebrate individuality and encourage you to
+                        embrace your unique style. Our mission is simple: to provide a platform where fashion isn't just
+                        about following trends, but about expressing your true self.
+                        <a href="./aboutUs.html">For more information.</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- more looks -->
+    <prod_cont>
+      <!-- more style -->
+      <div class="container moreProd" id="sweaterMoreSyles">
+        <div class="container mb-4">
+          <p class="content-focus mb-0">MORE STYLES</p>
+          <div class="d-flex">
+            <button class="btn btn-outline-dark mb-1" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+              data-bs-toggle="tooltip" data-bs-placement="right" title="Click to be informed in details!">
+              Details
+              <i class="fa-solid fa-circle-info ms-1"></i>
+            </button>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              The "Similar Style" feature at FashionGit is designed to enhance your shopping experience by suggesting
+              products that share similar design elements, aesthetics, or characteristics with the item you're currently
+              viewing.
+            </div>
+          </div>
+        </div>
+        <div class="scrollmenu">
+          <a href="./leatherHalterTop.html">
+            <img src="images/L-1.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$30.3
+              <br>Leather Halter Top
+            </p>
+          </a>
+          <a href="./sweater.html">
+            <img src="images/L-2.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$20.3
+              <br>Biker Core
+            </p>
+          </a>
+          <a href="./starPatchedCropTee.html">
+            <img src="images/w-7-col-1.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$20.99
+              <br>Y2K
+            </p>
+          </a>
+          <a href="./leatherHalterTop.html">
+            <img src="images/L-3.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$18.99
+              <br>RomCom Core
+            </p>
+          </a>
+          <a href="./sweater.html">
+            <img src="images/L-4.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$33.9
+              <br>Barbie Core
+            </p>
+          </a>
+          <a href="./starPatchedCropTee.html">
+            <img src="images/L-5.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$15.9
+              <br>Cotton
+            </p>
+          </a>
+          <a href="./leatherHalterTop.html">
+            <img src="images/L-6.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$25.9
+              <br>Y2K
+            </p>
+          </a>
+          <a href="./sweater.html">
+            <img src="images/L-7.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$33.9
+              <br>Minimilist
+            </p>
+          </a>
+        </div>
+      </div>
+      <!-- more in this colour -->
+      <div class="container moreProd" id="sweaterMoreColour">
+        <div class="container mb-4">
+          <p class="content-focus mb-0">MORE IN THIS COLOUR</p>
+          <div class="d-flex">
+            <button class="btn btn-outline-dark mb-1" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+              data-bs-toggle="tooltip" data-bs-placement="right" title="Click to be informed in details!">
+              Details
+              <i class="fa-solid fa-circle-info ms-1"></i>
+            </button>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              At FashionGit, we understand the importance of finding the perfect color to match your style. That's why
+              we've introduced the "More in This Color" feature, designed to enhance your shopping experience and help
+              you
+              discover additional products in the exact color you love.
+            </div>
+          </div>
+        </div>
+        <div class="scrollmenu">
+          <a href="./sweater.html">
+            <img src="images/1.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-1.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-2.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-3.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-4.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-5.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-6.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+          <a href="./sweater.html">
+            <img src="images/b-7.jpg" alt="" class="content_img object-fit-cover border rounded">
+          </a>
+        </div>
+      </div>
+    </prod_cont>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 column">
+            <h5>Help</h5>
+            <ul class="list-unstyled">
+              <li><a href="./help.html#v-pills-returns">Return Policy</a></li>
+              <li><a href="./help.html#v-pills-returns">Start a Return</a></li>
+              <li><a href="./help.html#v-pills-ordering-tab">Track Order</a></li>
+              <li><a href="./help.html#v-pills-ordering-tab">Odering</a></li>
+              <li><a href="./help.html#v-pills-shipping-tab">Shipping</a></li>
+              <li><a href="./help.html#v-pills-international-tab">International</a></li>
+              <li><a href="./careers.html">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 column">
+            <p class="contentHash">Stay In The Know</p>
+            <p>Be the first one to recevie new releases, special offers, and more</p>
+            <form class="text-start my-5">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Your Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="name@example.com" style="background-color: var(--primary); border-bottom: 2px solid;">
+                <div id="emailHelp" class="form-text">
+                  By signing up, you agree to receive recurring automated marketing messages from FashionGit. View <a
+                    href="./terms&Privacy.html">Terms and Privacy</a>
+                </div>
+              </div>
+            </form>
+            <p>Text <b>FashionGit</b> to <b>65598</b> to never miss a drop!</p>
+            <p style="font-size: 12px;">By signing up via text, you agree to receive recurring automated promotional and
+              personalized marketing text messages (e.g. cart reminders)
+              from SKIMS at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP
+              for help and STOP to cancel. Msg frequency varies. Msg & data rates may apply. View
+              <a href="./terms&Privacy.html">Terms and Privacy</a>
+            </p>
+            <ul class="list-inline social-icons">
+              <li>
+                <a href="https://www.instagram.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-facebook fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/FashionGit" target="_blank">
+                  <i class="fa-brands fa-pinterest fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@FashionGit" target="_blank">
+                  <i class="fa-brands fa-youtube fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@FashionGit" target="_blank">
+                  <i class="fa-brands fa-tiktok fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 column">
+            <div class="ms-auto">
+              <h5>More</h5>
+              <ul class="list-unstyled">
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="./influencer.html">Influencer</a></li>
+                <li><a href="./help.html#v-pills-stockists-tab">Stockists</a></li>
+                <li><a href="./eGiftCart.html">E-gift Card</a></li>
+                <li><a href="./help.html#v-pills-contact-tab">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 column d-flex">
+            <a href="#" class="me-5" data-bs-toggle="modal" data-bs-target="#countryCurrencyModal">
+              Country and Currency Selection
+            </a>
+            <!-- Country and Currency Modal -->
+            <div class="modal fade" id="countryCurrencyModal" tabindex="-1" aria-labelledby="countryCurrencyModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: var(--primary);">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="countryCurrencyModalLabel">Country and Currency Selection</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Country Selection -->
+                    <div class="mb-3">
+                      <label for="countrySelect" class="form-label">Select Country</label>
+                      <select class="form-select" id="countrySelect" style="background-color: var(--primary);">
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                      </select>
+                    </div>
+                    <!-- Currency Selection -->
+                    <div class="mb-3">
+                      <label for="currencySelect" class="form-label">Select Currency</label>
+                      <select class="form-select" id="currencySelect" style="background-color: var(--primary);">
+                        <option value="usd">USD</option>
+                        <option value="gbp">GBP</option>
+                        <option value="cad">CAD</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" style="background-color: var(--warning);">Save
+                      changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="mx-auto">&copy; 2023 FashionGit. All rights reserved.</p>
+            <div class="ms-auto">
+              <a href="./accessbility.html" class="me-2">Accessbility</a>
+              <a href="./terms&Privacy.html#Privacy" class="me-2">Privacy</a>
+              <a href="./terms&Privacy.html#Terms" class="me-2">Terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top button -->
+    <div id="backToTopBtn" class="back-to-top-btn home-btt">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </div>
+
+  <!-- back-to-top-btn script -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+    document.getElementById('backToTopBtn').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script src="cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+  <script src="main.js"></script>
+  <!-- loader logo -->
+  <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MADAMS' WEARS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <!-- preloader -->
+  <div id="loader"></div>
+
+  <div style="display: none;" id="myDiv" class="animate-bottom">
+    <!-- First Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-first bg-body-white">
+      <div class="container-fluid">
+        <!-- Use responsive utility class to hide the navbar-collapse on smaller screens -->
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="./index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#supportModal">
+                <i class="fa-solid fa-headset"></i>
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo-container justify-content-center">
+          <a class="navbar-brand" href="./index.html">
+            <img src="images/logo.png" alt="" width="75px" height="70px">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                <i class="fa-solid fa-heart"></i>
+                0
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
+                aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content" style="background-color: var(--primary);">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Like our items and stay updated with our latest products and offers. Subscribe to our
+                        newsletter
+                        now!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-light"
+                        style="background-color: var(--warning);">Subscribe</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link active me-3" id="cartLink">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" aria-current="page" href="./login.html">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                SignIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Support Modal -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" style="background-color: var(--primary);">
+          <div class="modal-header">
+            <h4 class="modal-title" id="supportModalLabel">Contact Support</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>If you need assistance, please contact our support team:</p>
+            <ul>
+              <li>Email: support@fashiongit.com.</li>
+              <li>Phone: 123-456-7890</li>
+            </ul>
+            <p>We are opening everyday at 9 am to 8 pm.</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.7926300677805!2d77.54404977459595!3d10.11605337102793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0769493fed283d%3A0x3e7ea51ae0ad77a2!2sGIT%20Elite%20fashion!5e0!3m2!1sen!2smm!4v1691119628553!5m2!1sen!2smm"
+              width="466" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-white home-cat-nav">
+      <div class="container-fluid pb-2">
+        <!-- Toggler button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <a href="./index.html">
+            <img src="images/logo.png" alt="" width="75px" height="70px" class="d-lg-none">
+          </a>
+        </button>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-lg-none flex-row">
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="./index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#supportModal">
+              <i class="fa-solid fa-headset"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModalDrop">
+              <i class="fa-solid fa-heart"></i>
+              0
+            </a>
+            <!-- Heart Modal -->
+            <div class="modal fade" id="subscribeModalDrop" tabindex="-1" aria-labelledby="subscribeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: var(--primary);">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Like our items and stay updated with our latest products and offers. Subscribe to our newsletter
+                      now!</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light"
+                      style="background-color: var(--warning);">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link active me-3" id="cartLink">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartItemCount">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="./login.html">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-close-white " data-bs-toggle="dropdown" aria-expanded="false">
+                CONTENT
+                <i class="fa-solid fa-bars mx-2"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#madamWear">Madams' Wears</a></li>
+                <li><a class="dropdown-item" href="#madamProdCat">Madam Category</a></li>
+                <li><a class="dropdown-item" href="#madamProductList">Madam Clothes</a></li>
+                <li><a class="dropdown-item" href="#footer">More</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./kidsWear.html">
+                KIDS' WEARS
+              </a>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./ladiesWear.html">
+                LADIES' WEARS
+              </a>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <a class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                href="./madamsWear.html">
+                MADAMS' WEARS
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex me-3" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="search your unique style" aria-label="Search"
+              id="searchInput">
+            <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- breadcrumb -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <div class="container mt-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">HOME</a></li>
+          <li class="breadcrumb-item active" aria-current="page">MADAMS' WEARS</li>
+        </ol>
+      </div>
+    </nav>
+
+    <prod_cont>
+      <div class="container mb-5">
+        <!-- madamWear -->
+        <div class="container mb-5" id="madamWear">
+          <p class="content-focus mb-0">MADAMS' WEARS</p>
+          <div class="d-flex">
+            <button class="btn btn-outline-dark mb-1" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+              data-bs-toggle="tooltip" data-bs-placement="right" title="Click to be informed in details!">
+              Details
+              <i class="fa-solid fa-circle-info ms-1"></i>
+            </button>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              Step into a realm of sophistication, luxury, and timeless style with our exclusive collection of Madams'
+              Wears at FashionGit. Designed to capture the essence of grace and elegance, our Madams' Wears showcase a
+              curated selection of attire that resonates with the discerning taste of mature women.
+            </div>
+          </div>
+        </div>
+        <!-- madamProdCat -->
+        <div class="scrollmenu" id="madamProdCat">
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-1.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$30.3
+              <br>Croset Crop Top
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-2.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$20.3
+              <br>Bikini
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-3.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$20.99
+              <br>Sheer Crop Top
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-4.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$18.99
+              <br>Jumpsuit
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-5.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$50.99
+              <br>Maxi Skirt
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-6.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$15.9
+              <br>Shorts
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-7.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$25.9
+              <br>Long Sleeve Crop Top
+            </p>
+          </a>
+          <a href="./maxiSkirt.html">
+            <img src="images/mc-8.jpg" alt="" class="content_img object-fit-cover border rounded">
+            <p class="price fs-6 mt-3">$33.9
+              <br>Cotton Maxi Skirt
+            </p>
+          </a>
+        </div>
+      </div>
+  </prod_cont>
+
+  <div class="container pt-5" id="madamProductList">
+    <div class="row">
+      <!-- first column -->
+      <div class="col-2 p-0" id="sidebarProd">
+        <sidemenu>
+          <div class="nav flex-column productList">
+            <div class="my-3">
+              <div class="d-flex">
+                <button class="btn  mb-1 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSize"
+                  aria-expanded="false" aria-controls="collapseSize" data-bs-toggle="tooltip" data-bs-placement="right"
+                  title="Click to be informed in details!">
+                  SIZE
+                  <i class="fa-solid fa-chevron-down "></i>
+                </button>
+              </div>
+              <div class="collapse" id="collapseSize">
+                <div class="card card-body card-body-ladies me-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="sizeXXS" value="XXS">
+                    <label class="form-check-label" for="sizeXXS">XXS</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="sizeXS" value="XS">
+                    <label class="form-check-label" for="sizeXS">XS</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="sizeS" value="S">
+                    <label class="form-check-label" for="sizeS">S</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="sizeM" value="M">
+                    <label class="form-check-label" for="sizeM">M</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="sizeL" value="L">
+                    <label class="form-check-label" for="sizeL">L</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="sizeXL" value="XL">
+                    <label class="form-check-label" for="sizeXL">XL</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="size2XL" value="2XL">
+                    <label class="form-check-label" for="size2XL">2XL</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="size3XL" value="3XL">
+                    <label class="form-check-label" for="size3XL">3XL</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-3">
+              <div class="d-flex">
+                <button class="btn  mb-1 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseStyle"
+                  aria-expanded="false" aria-controls="collapseStyle" data-bs-toggle="tooltip" data-bs-placement="right"
+                  title="Click to be informed in details!">
+                  STYLE
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="collapse" id="collapseStyle">
+                <div class="card card-body card-body-ladies me-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox1">
+                    <label class="form-check-label" for="checkbox1">FashionGit Signature</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox2">
+                    <label class="form-check-label" for="checkbox2">Elegant</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox3">
+                    <label class="form-check-label" for="checkbox3">Fashionable</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox4">
+                    <label class="form-check-label" for="checkbox4">Casual</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox5">
+                    <label class="form-check-label" for="checkbox5">Y2K</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox6">
+                    <label class="form-check-label" for="checkbox6">Acubi</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-3">
+              <div class="d-flex">
+                <button class="btn  mb-1 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseColor"
+                  aria-expanded="false" aria-controls="collapseColor" data-bs-toggle="tooltip" data-bs-placement="right"
+                  title="Click to be informed in details!">
+                  COLOR
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="collapse" id="collapseColor">
+                <div class="card card-body card-body-ladies me-3">
+                  <table>
+                    <tr>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #9b40f6;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #04e889;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #f1a25d;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #cb3c7c;"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #edf640;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #3204e8;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #f15d71;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #3ca0cb;"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #36a481;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #04e889;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #54161a;"></i></a>
+                      </td>
+                      <td>
+                        <a href="#"><i class="fa-solid fa-circle fa-lg" style="color: #a22222;"></i></a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="my-3">
+              <div class="d-flex">
+                <button class="btn  mb-1 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseCollection"
+                  aria-expanded="false" aria-controls="collapseSize" data-bs-toggle="tooltip" data-bs-placement="right"
+                  title="Click to be informed in details!">
+                  COLLECTION
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="collapse" id="collapseCollection">
+                <div class="card card-body card-body-ladies me-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox101">
+                    <label class="form-check-label" for="checkbox101">FashionGit Signature</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox102">
+                    <label class="form-check-label" for="checkbox102">Fit Everybody</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox103">
+                    <label class="form-check-label" for="checkbox103">Featured</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox104">
+                    <label class="form-check-label" for="checkbox104">Celebrity</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox105">
+                    <label class="form-check-label" for="checkbox105">Boyfriend</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox106">
+                    <label class="form-check-label" for="checkbox106">New Vintage</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sidemenu>
+      </div>
+      <!-- second column -->
+      <div class="col text-center" id="content">
+        <p class="contentHead mb-4 text-start">Fit Everybody</p>
+        <div class="row row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-1.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-1-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="./leatherHalterTop.html" class="description">One Off-Shoulder Dress</a>
+                <p class="price-through">$18.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-2.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-2-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">High Spilt Maxi Dress</a>
+                <p class="price-through">$22.8</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-3.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-3-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Cowl Neck Floor Length Dress</a>
+                <p class="price-through">$18.4</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-4.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-4-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Bandeau Ruffle Detail Maxi Dress</a>
+                <p class="price-through">$21.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-5.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-5-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Asymmetric Draped Midi Dress</a>
+                <p class="price-through">$24.2</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-6.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-6-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Low Plunge Ruched Mini Dress</a>
+                <p class="price-through">$17.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="ms-auto my-3 p-2 text-end">
+            <button type="button" class="btn btn-dark px-5 my-3" id="viewMoreButton">View More</button>
+          </div>
+        </div>
+        <div class="row row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card d-none" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-7.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-7-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="./leatherHalterTop.html" class="description">Lace Up Corset Maxi Dress</a>
+                <p class="price-through">$20.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-none" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-8.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-8-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Halter Neck Low Back Maxi Dress</a>
+                <p class="price-through">$19.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-none" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-9.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-9-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Halter Neck Low Back Maxi Dress</a>
+                <p class="price-through">$20.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-none" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-10.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-10-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Asymmetric Sleeve Mini Dress</a>
+                <p class="price-through">$20.99</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-none" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-11.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-11-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Ruched Cut Out Midi Dress</a>
+                <p class="price-through">$16.5</p>
+                <a href="./cart.html" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-none" style="width: 21rem;">
+              <a href="./leatherHalterTop.html">
+                <div class="image-container">
+                  <img src="images/m-12.jpg" alt="Original Image" class="object-fit-cover border rounded">
+                  <div class="overlay">
+                    <img src="images/m-12-overlay.jpg" alt="Overlay Image" class="object-fit-cover border rounded">
+                  </div>
+                </div>
+              </a>
+              <div class="card-body card-body-ladies">
+                <p class="price-through">Fit Everybody</p>
+                <a href="#" class="description">Halter Neck Cut Out Mini Dress</a>
+                <p class="price-through">$28.99</p>
+                <button type="button" class="btn btn-outline-dark px-5 my-3 addToCart_Detail">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer" id="footer">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 column">
+          <h5>Help</h5>
+          <ul class="list-unstyled">
+            <li><a href="./help.html#v-pills-returns">Return Policy</a></li>
+            <li><a href="./help.html#v-pills-returns">Start a Return</a></li>
+            <li><a href="./help.html#v-pills-ordering-tab">Track Order</a></li>
+            <li><a href="./help.html#v-pills-ordering-tab">Odering</a></li>
+            <li><a href="./help.html#v-pills-shipping-tab">Shipping</a></li>
+            <li><a href="./help.html#v-pills-international-tab">International</a></li>
+            <li><a href="./careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 column">
+          <p class="contentHash">Stay In The Know</p>
+          <p>Be the first one to recevie new releases, special offers, and more</p>
+          <form class="text-start my-5">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Your Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="name@example.com" style="background-color: var(--primary); border-bottom: 2px solid;">
+              <div id="emailHelp" class="form-text">
+                By signing up, you agree to receive recurring automated marketing messages from FashionGit. View <a
+                  href="./terms&Privacy.html">Terms and Privacy</a>
+              </div>
+            </div>
+          </form>
+          <p>Text <b>FashionGit</b> to <b>65598</b> to never miss a drop!</p>
+          <p style="font-size: 12px;">By signing up via text, you agree to receive recurring automated promotional and
+            personalized marketing text messages (e.g. cart reminders)
+            from SKIMS at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP
+            for help and STOP to cancel. Msg frequency varies. Msg & data rates may apply. View
+            <a href="./terms&Privacy.html">Terms and Privacy</a>
+          </p>
+          <ul class="list-inline social-icons">
+            <li>
+              <a href="https://www.instagram.com/FashionGit" target="_blank">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/FashionGit" target="_blank">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/FashionGit" target="_blank">
+                <i class="fa-brands fa-twitter fa-xl"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/FashionGit" target="_blank">
+                <i class="fa-brands fa-pinterest fa-xl"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@FashionGit" target="_blank">
+                <i class="fa-brands fa-youtube fa-xl"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@FashionGit" target="_blank">
+                <i class="fa-brands fa-tiktok fa-xl"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 column">
+          <div class="ms-auto">
+            <h5>More</h5>
+            <ul class="list-unstyled">
+              <li><a href="./aboutUs.html">About Us</a></li>
+              <li><a href="./influencer.html">Influencer</a></li>
+              <li><a href="./help.html#v-pills-stockists-tab">Stockists</a></li>
+              <li><a href="./eGiftCart.html">E-gift Card</a></li>
+              <li><a href="./help.html#v-pills-contact-tab">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 column d-flex">
+          <a href="#" class="me-5" data-bs-toggle="modal" data-bs-target="#countryCurrencyModal">
+            Country and Currency Selection
+          </a>
+          <!-- Country and Currency Modal -->
+          <div class="modal fade" id="countryCurrencyModal" tabindex="-1" aria-labelledby="countryCurrencyModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content" style="background-color: var(--primary);">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="countryCurrencyModalLabel">Country and Currency Selection</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Country Selection -->
+                  <div class="mb-3">
+                    <label for="countrySelect" class="form-label">Select Country</label>
+                    <select class="form-select" id="countrySelect" style="background-color: var(--primary);">
+                      <option value="us">United States</option>
+                      <option value="uk">United Kingdom</option>
+                      <option value="ca">Canada</option>
+                    </select>
+                  </div>
+                  <!-- Currency Selection -->
+                  <div class="mb-3">
+                    <label for="currencySelect" class="form-label">Select Currency</label>
+                    <select class="form-select" id="currencySelect" style="background-color: var(--primary);">
+                      <option value="usd">USD</option>
+                      <option value="gbp">GBP</option>
+                      <option value="cad">CAD</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-dark" style="background-color: var(--warning);">Save
+                    changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mx-auto">&copy; 2023 FashionGit. All rights reserved.</p>
+          <div class="ms-auto">
+            <a href="./accessbility.html" class="me-2">Accessbility</a>
+            <a href="./terms&Privacy.html#Privacy" class="me-2">Privacy</a>
+            <a href="./terms&Privacy.html#Terms" class="me-2">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- back-to-top-btn -->
+  <div id="backToTopBtn" class="back-to-top-btn ladies-btt">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+</div>
+
+  <!-- script -->
+  <script>
+    const viewMoreButton = document.getElementById('viewMoreButton');
+    viewMoreButton.addEventListener('click', function () {
+      const hiddenCards = document.querySelectorAll('.card.d-none');
+      hiddenCards.forEach(card => {
+        card.classList.remove('d-none');
+      });
+      viewMoreButton.style.display = 'none';
+    });
+
+    window.addEventListener('scroll', function () {
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    document.getElementById('backToTopBtn').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <script src="main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+
+  <!-- loader logo -->
+  <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
